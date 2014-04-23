@@ -22,7 +22,7 @@
             </feature>
         </config-file>
 
-        <config-file target="AndroidManifest.xml" parent="/application/*">
+        <config-file target="AndroidManifest.xml" parent="/*/application">
             <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="开发密钥"></meta-data>  
         </config-file>
         
