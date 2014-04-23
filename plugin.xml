@@ -18,7 +18,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Map">
-                <param name="android-package" value="com.baidu.light.map.MapLauncher"/>
+                <param name="android-package" value="com.baidu.light.map.BaiduMap"/>
             </feature>
         </config-file>
 
@@ -47,7 +47,7 @@
             <uses-permission android:name="android.permission.ACCESS_GPS"></uses-permission>
         </config-file>
 
-        <source-file src="src/android/MapLauncher.java" target-dir="src/com/baidu/light/map" />
+        <source-file src="src/android/BaiduMap.java" target-dir="src/com/baidu/light/map" />
         <source-file src="src/android/libs/baidumapapi_v2_4_1.jar" target-dir="libs" />
         <source-file src="src/android/libs/locSDK_3.1.jar" target-dir="libs" />
         <source-file src="src/android/libs/armeabi/libBaiduMapSDK_v2_4_1.so" target-dir="libs/armeabi" />

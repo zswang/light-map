@@ -16,4 +16,4 @@ function init(options, callback) {
 
 baidumap.init = init;
 
-module.exports = nlog;
+module.exports = baidumap;
