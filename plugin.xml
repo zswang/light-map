@@ -48,10 +48,10 @@
         </config-file>
 
         <source-file src="src/android/MapLauncher.java" target-dir="src/com/baidu/light/map" />
-        <source-file src="src/android/libs/baidumapapi_v2_4_1.jar" target-dir="libs/baidumapapi_v2_4_1.jar" />
-        <source-file src="src/android/libs/locSDK_3.1.jar" target-dir="libs/locSDK_3.1.jar" />
-        <source-file src="src/android/libs/armeabi/liblocSDK3.so" target-dir="libs/armeabi/liblocSDK3.so" />
-        <source-file src="src/android/libs/armeabi/liblocSDK3.so" target-dir="libs/armeabi/libBaiduMapSDK_v2_4_1.so" />
+        <source-file src="src/android/libs/baidumapapi_v2_4_1.jar" target-dir="libs" />
+        <source-file src="src/android/libs/locSDK_3.1.jar" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/liblocSDK3.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/liblocSDK3.so" target-dir="libs/armeabi" />
     </platform>
 
 </plugin>
