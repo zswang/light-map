@@ -1,0 +1,14 @@
+{
+    "version": "0.1.0",
+    "name": "com.baidu.light.map",
+    "cordova_name": "BaiduMap",
+    "description": "Cordova Map Plugin",
+    "license": "Apache 2.0",
+    "repo": "https://github.com/zswang/light-map.git",
+    "issue": "https://github.com/zswang/light-map/issues",
+    "keywords": [
+        "cordova",
+        "map"
+    ],
+    "engines": []
+}

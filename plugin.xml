@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="com.baidu.light.map"
+      version="0.1.0">
+    <name>Map</name>
+    <description>Cordova Map Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,battery</keywords>
+    <repo>https://github.com/zswang/light-map.git</repo>
+    <issue>https://github.com/zswang/light-map/issue</issue>
+
+    <js-module src="www/map.js" name="baidumap">
+        <clobbers target="light.map" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Map">
+                <param name="android-package" value="com.baidu.light.map.MapLauncher"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/application/*">
+            <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="开发密钥"></meta-data>  
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <!--使用网络功能所需权限  -->
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+            <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission><uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+            </uses-permission>
+            <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+            <uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
+            <!-- 获取设置信息和详情页直接拨打电话需要以下权限  -->
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+            <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+            <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+            <permission android:name="android.permission.BAIDU_LOCATION_SERVICE"></permission>
+            <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"></uses-permission>
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+            <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>
+            <uses-permission android:name="android.permission.ACCESS_GPS"></uses-permission>
+        </config-file>
+
+        <source-file src="src/android/MapLauncher.java" target-dir="src/com/baidu/light/map" />
+        <source-file src="src/android/libs/baidumapapi_v2_4_1.jar" target-dir="libs/baidumapapi_v2_4_1.jar" />
+        <source-file src="src/android/libs/locSDK_3.1.jar" target-dir="libs/locSDK_3.1.jar" />
+        <source-file src="src/android/libs/armeabi/liblocSDK3.so" target-dir="libs/armeabi/liblocSDK3.so" />
+        <source-file src="src/android/libs/armeabi/liblocSDK3.so" target-dir="libs/armeabi/libBaiduMapSDK_v2_4_1.so" />
+    </platform>
+
+</plugin>
