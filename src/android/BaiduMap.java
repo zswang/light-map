@@ -16,8 +16,8 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.util.Log;
 
-public class MapLauncher extends CordovaPlugin {
-	private static final String LOG_TAG = "MapLauncher";
+public class BaiduMap extends CordovaPlugin {
+	private static final String LOG_TAG = "BaiduMap";
 	private static final boolean DEBUG = true;
 
 	private CallbackContext mCallbackContext = null;
