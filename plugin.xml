@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
       id="com.baidu.light.map"
       version="0.1.0">
-    <name>Map</name>
+    <name>BaiduMap</name>
     <description>Cordova Map Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,battery</keywords>
@@ -17,7 +17,7 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Map">
+            <feature name="BaiduMap">
                 <param name="android-package" value="com.baidu.light.map.BaiduMap"/>
             </feature>
         </config-file>
