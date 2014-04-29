@@ -10,7 +10,6 @@ var baidumap = baidumap || {};
  */
 function init(options, callback) {
 	exec(callback, function() {
-
 	}, 'BaiduMap', 'init', [options]);
 };
 
